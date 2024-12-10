@@ -1,18 +1,18 @@
+import { School } from "lucide-react";
 import Image from "next/image";
 
 export default function Credit() {
     return (
         <div>
-            <div className="bg-blue-900 mt-20 w-full justify-center flex">
+            <div className="bg-blue-900 mt-0 w-full justify-center flex">
                 <div className="mt-10 mb-10 w-2/3 flex justify-between text-white">
                     <div className="flex">
-                        <Image
-                            src="/images/obac-logo.png"
-                            alt="obac-logo"
-                            width={70}
-                            height={20}
-                            className="p-1 w-auto h-16"
-                        />
+                        <div className="pt-0">
+                           <School
+                           style={{ width: "2.8rem", height: "4.0rem" }}
+                           /> 
+                        </div>
+                        
                         {/* Name university */}
                         <div className="flex flex-col justify-start font-inter font-bold p-2 pl-6 ">
                             <span className="sm:text-lg ">
@@ -32,7 +32,7 @@ export default function Credit() {
                 </div>
             </div>
             <div className="text-center py-8 bg-blue-900 text-white">
-                <p>© 2024 เอกวิทย์ยชาการวิทยาลัย | All rights reserved</p>
+                <p>© 2024 เอกวิทย์ชาการวิทยาลัย | All rights reserved</p>
             </div>
         </div>
     );
