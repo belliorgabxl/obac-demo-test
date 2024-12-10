@@ -135,7 +135,7 @@ export const NavbarData: DropMenuProps[] = [
         className="text-white  transition-colors"
       />,
         tab: "activity",
-        href:"/pages/home"
+        href:"/pages/home/"
       },
       {
         menuName: "ข่าวสาร",
@@ -144,7 +144,7 @@ export const NavbarData: DropMenuProps[] = [
         className="text-white  transition-colors"
       />,
         tab: "news",
-        href:"/pages/home"
+        href:"/pages/home/news"
       },
     ],
   },
