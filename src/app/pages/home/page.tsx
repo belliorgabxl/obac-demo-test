@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div>
       <CLShomepage />
-      <div className="flex w-ful bg-white ">
+      <div className="flex w-full bg-white ">
         {/* slide bar on homepage */}
-        <div className="w-3/12 flex flex-col  ml-5 mt-2 gap-4">
+        {/* <div className="w-3/12 flex flex-col  ml-5 mt-2 gap-4">
           <div className=" bg-white w-full border-[1px] border-gray-200 sticky rounded-md py-3 px-2 gap-4 flex flex-col shadow-md shadow-gray-200">
             {SidebarData.map((item, index) => (
               <div
@@ -26,14 +26,14 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         {/* news and activity */}
-        <div className="w-4/5  mx-10 mt-2 flex flex-col border-[1px] shadow-md shadow-gray-200 px-16 py-10">
-          <h1 className="text-2xl bg-blue-900 text-white px-5 py-1">
-            ข่าวสาร และ กิจกรรม วิทยาลัยอาชีวศึกษาเอกวิทย์บริหารธุรกิจ
+        <div className="w-full items-center  flex flex-col  px-4 py-4">
+          <h1 className="text-5xl text-blue-800 my-20 font-bold px-5 py-1">
+            News And Events
           </h1>
-          <hr className="my-5 border-[1px]"/>
-          <div className="">
+          {/* <hr className="my-5 border-[1px] "/> */}
+          <div className="grid grid-cols-3 gap-x-20 mx-40 ">
             <CardHorizontal cardData={cardData} />
           </div>
         </div>
