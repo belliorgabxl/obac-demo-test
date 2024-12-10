@@ -14,7 +14,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
       <body><TeacherSidebar
           menuItems={TeacherSideBarData.menuItems}
           profileData={ProfileData}
