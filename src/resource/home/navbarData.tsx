@@ -1,7 +1,7 @@
 
 
 
-import { Boxes, CalendarRange, Component, Cpu, HandCoins, HandIcon ,Landmark , Lightbulb, Newspaper, NotebookTabs, Phone, Plane, TvMinimalPlay, Users } from "lucide-react";
+import { Boxes, CalendarRange, Component, Cpu, HandCoins ,Landmark , Lightbulb, Newspaper, NotebookTabs, Phone, Plane, TvMinimalPlay, Users } from "lucide-react";
 interface DropMenuList {
   menuName: string;
   menuIcon: React.ReactNode;
