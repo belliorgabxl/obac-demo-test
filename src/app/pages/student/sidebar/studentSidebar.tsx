@@ -6,6 +6,8 @@ import {
 } from "@/resource/students/studentSidebarData";
 import { CiUser } from "react-icons/ci";
 import React from "react";
+import { IoLogOutOutline } from "react-icons/io5";
+import { exampleStudentData } from "@/resource/students/infoStudent";
 
 export function StudentSidebar({
   menuItems,
@@ -23,18 +25,37 @@ export function StudentSidebar({
       />
 
       {/* Navbar */}
-      <div className="flex justify-center items-center w-full gap-6 h-full">
-        <img
-          src="/images/obac_navbar_logo.png"
-          alt="obac-logo"
-          style={{
-            width: "2.5rem",
-            height: "2.5rem",
-          }}
-        />
-        <span className="text-center text- py-1">
-          วิทยาลัยอาชีวศึกษาเอกวิทย์บริหารธุรกิจ
-        </span>
+      <div className="w-full h-full flex">
+        <div className="w-1/4"></div>
+        <div className="flex justify-center items-center w-full gap-6 h-full">
+          <img
+            src="/images/obac_navbar_logo.png"
+            alt="obac-logo"
+            style={{
+              width: "2.5rem",
+              height: "2.5rem",
+            }}
+          />
+          <span className="text-center text- py-1">
+            วิทยาลัยอาชีวศึกษาเอกวิทย์บริหารธุรกิจ
+          </span>
+        </div>
+        <div className=" mr-6  flex">
+          <div className="mt-2 mr-1 px-1 flex gap-x-1">
+            <div className="mr-1">
+              {exampleStudentData.generalInfo.studentID}
+            </div>
+            <div>
+              {exampleStudentData.generalInfo.name}
+            </div>
+            <div>
+              {exampleStudentData.generalInfo.surname}
+            </div>
+          </div>
+          <button className="hover:scale-125 duration-500">
+            <IoLogOutOutline className="w-6 h-6" />
+          </button>
+        </div>
       </div>
     </header>
   );
