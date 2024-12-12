@@ -2,11 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { NavbarData } from "@/resource/home/navbarData";
 import DropMenu from "@/app/components/dropdown/dropdown-menu-1";
-import { CiLogin } from "react-icons/ci";
-import { VscSignIn } from "react-icons/vsc";
 import { FaSignInAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
-
+import { Bookmark, CircleCheck, LogIn } from "lucide-react";
 
 export function Navbar() {
   return (
@@ -35,7 +33,7 @@ export function Navbar() {
           <div className="justify-end grid place-items-center px-10 mr-6 sm:px-2 sm:py-1">
             <a href="/pages/login" className="px-4 py-2 flex rounded-md bg-blue-900 text-white hover:bg-blue-700 ">Sign In
               <div className="mt-0.5 ml-2 text-xl">
-                <FaSignInAlt />
+                <LogIn />
               </div>
 
             </a>
@@ -49,8 +47,13 @@ export function Navbar() {
         </div>
 
         <div className="justify-end flex place-items-center px-10 sm:px-2 sm:py-1">
-          <a href="/pages/login" className=" py-2 px-4 rounded-md bg-blue-950 text-white text-xl hover:bg-blue-900 duration-500">
-            <FaUser />
+          <a href="/pages/login" className="flex gap-2 justify-center  py-1  bg-blue-950 px-10 border-white border-2 rounded-full text-white text-xl hover:bg-blue-700 ">
+          สมัครออนไลน์
+          <div className="pt-0.5">
+            <CircleCheck className="" /> 
+          </div>
+           
+            
           </a>
         </div>
       </div>

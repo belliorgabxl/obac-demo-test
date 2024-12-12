@@ -24,6 +24,7 @@ export interface GetAllTeacher{
 }
 
 export interface GetTeacherByTeacherId {
+    nameTitle:string,
     teacherId: number,
     teacherCode:string,
     teacherEngFirstName: string,
