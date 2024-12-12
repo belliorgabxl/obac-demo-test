@@ -5,6 +5,9 @@ import { ChevronDown, ChevronUp, CircleUserRound } from "lucide-react";
 import { exampleStudentData } from "@/resource/students/infoStudent";
 import React, { useState } from "react";
 import { LabelText } from "@/app/components/labelText/labelText";
+import { FaHouseChimneyUser } from "react-icons/fa6";
+import { FaUserGraduate } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa6";
 
 export default function Form() {
   const [isGeneralInfoVisible, setGeneralInfoVisible] = useState(true);
@@ -41,37 +44,37 @@ export default function Form() {
     setIsPresentAddressInfoVisible((prev) => !prev);
   };
   return (
-    <header className="mx-4 sm:mx-10 lg:mx-44 p-4 mt-10 ">
-      <div className="p-4 text-lg sm:text-xl flex flex-col w-auto">
+    <header className="mx-4 sm:mx-10 lg:mx-28 p-4 mt-2">
+      <div className=" text-lg sm:text-xl flex  flex-col w-auto">
         <div>
-          <Badge className="text-sm sm:text-base" variant="outline">
+          <div className="  text-xl font-bold text-zinc-800">
             ประวัตินิสิต
-          </Badge>
+          </div>
         </div>
-        <div className="mt-4 flex flex-col">
+        <div className="mt-4 flex flex-col bg-white">
           <div
             className="w-full flex justify-center mt-2 gap-10
                 p-4 text-sm"
           >
             {/* icon */}
-            <div className="flex justify-center items-center w-10/12 border-2 border-blue-800 p-4 shadow-sm rounded-md">
-              <div className="flex justify-center items-center w-4/12">
+            <div className="flex justify-center items-center w-full  ">
+              <div className="flex justify-center items-center mx-4">
                 <button className="flex items-start gap-6 ">
                   <CircleUserRound
-                    style={{ width: "5rem", height: "5rem" }}
+                    style={{ width: "3.5rem", height: "5rem" }}
                     className="text-[#0C2943]"
                   />
                 </button>
               </div>
               {/* Info Student */}
-              <div className="flex flex-col gap-4 p-2 w-8/12 font-semibold">
+              <div className="flex flex-col gap-2 p-4 w-auto font-semibold">
                 <div>{exampleStudentData.generalInfo.studentID}</div>
                 <div>
                   {exampleStudentData.generalInfo.titleName}{" "}
                   {exampleStudentData.generalInfo.name}
                   {exampleStudentData.generalInfo.surname}
                 </div>
-                <div className="flex gap-10">
+                <div className="flex gap-2">
                   <Badge>
                     <div>{exampleStudentData.educationalInfo.faculty}</div>
                   </Badge>
@@ -84,29 +87,32 @@ export default function Form() {
           </div>
         </div>
 
-        <div className="mt-4 flex w-full">
+        <div className="mt-4 flex w-full bg-slate-100">
           <div className="w-full">
             <Tabs
               defaultValue="profile"
-              className="w-full z-10 flex min-h-dvh border-2 border-black rounded-md"
+              className="w-full z-10 flex min-h-dvh border-8 border-white"
             >
 
-              <TabsList className="rounded-sm  flex flex-col w-3/12 sticky h-40  ">
-                <TabsTrigger value="profile" className="p-4 w-full">
+              <TabsList className="rounded-none p-1 flex flex-col w-3/12 sticky h-48  ">
+                <TabsTrigger value="profile" className="p-4 w-full duration-500">
+                <FaUser className="w-5 h-5 mr-4"/>
                   ข้อมูลทั่วไป
                 </TabsTrigger>
-                <TabsTrigger value="education" className="p-4 w-full">
+                <TabsTrigger value="education" className="p-4 w-full duration-500">
+                <FaUserGraduate className="w-5 h-5 mr-4"/>
                   ข้อมูลการศึกษา
                 </TabsTrigger>
-                <TabsTrigger value="address" className="p-4 w-full">
+                <TabsTrigger value="address" className="p-4 w-full duration-500">
+                  <FaHouseChimneyUser className="w-6 h-5 mr-3" />
                   ข้อมูลที่อยู่
                 </TabsTrigger>
               </TabsList>
 
-              <div className="w-9/12 flex bg-sky-50 z-10 border-l-4 border-slate-200 p-4">
+              <div className="w-9/12 flex z-10 border-l-4 border-slate-100 pl-2 bg-white">
                 <TabsContent
                   value="profile"
-                  className="flex-grow ml-6 p-2 text-sm"
+                  className="flex-grow  pl-2 text-sm"
                 >
                   <div className="p-2">
                     <h1
@@ -120,9 +126,8 @@ export default function Form() {
                     </h1>
 
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isGeneralInfoVisible ? "max-h-[1000px]" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isGeneralInfoVisible ? "max-h-[1000px]" : "max-h-0"
+                        }`}
                     >
                       <div className="relative gap-2 w-full items-center flex flex-col">
                         <LabelText
@@ -172,9 +177,8 @@ export default function Form() {
                       </span>
                     </h1>
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isFatherInfoVisible ? "max-h-[1000px]" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isFatherInfoVisible ? "max-h-[1000px]" : "max-h-0"
+                        }`}
                     >
                       {isFatherInfoVisible && (
                         <div className="relative gap-2 w-full items-center flex flex-col">
@@ -216,9 +220,8 @@ export default function Form() {
                       </span>
                     </h1>
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isMotherInfoVisible ? "max-h-[1000px]" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isMotherInfoVisible ? "max-h-[1000px]" : "max-h-0"
+                        }`}
                     >
                       {isMotherInfoVisible && (
                         <div className="relative gap-2 w-full items-center flex flex-col">
@@ -251,7 +254,7 @@ export default function Form() {
                 </TabsContent>
                 <TabsContent
                   value="education"
-                  className="flex-grow ml-6 p-2 text-sm"
+                  className="flex-grow  pl-2 text-sm"
                 >
                   <div className="p-2">
                     <h1
@@ -269,9 +272,8 @@ export default function Form() {
                     </h1>
 
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isEducationInfoVisible ? "max-h-[1000px]" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isEducationInfoVisible ? "max-h-[1000px]" : "max-h-0"
+                        }`}
                     >
                       <div className="relative gap-2 w-full items-center flex flex-col">
                         <LabelText
@@ -320,7 +322,7 @@ export default function Form() {
                 </TabsContent>
                 <TabsContent
                   value="address"
-                  className="flex-grow ml-6 p-2 text-sm"
+                  className="flex-grow pl-2 text-sm"
                 >
                   <div className="p-2">
                     <h1
@@ -334,9 +336,8 @@ export default function Form() {
                     </h1>
 
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isAddressInfoVisible ? "max-h-[1000px]" : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isAddressInfoVisible ? "max-h-[1000px]" : "max-h-0"
+                        }`}
                     >
                       <div className="relative gap-2 w-full items-center flex flex-col">
                         <LabelText
@@ -379,11 +380,10 @@ export default function Form() {
                     </h1>
 
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                        isPresentAddressInfoVisible
-                          ? "max-h-[1000px]"
-                          : "max-h-0"
-                      }`}
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isPresentAddressInfoVisible
+                        ? "max-h-[1000px]"
+                        : "max-h-0"
+                        }`}
                     >
                       <div className="relative gap-2 w-full items-center flex flex-col">
                         <LabelText

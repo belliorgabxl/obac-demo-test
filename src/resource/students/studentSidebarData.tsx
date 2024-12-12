@@ -34,8 +34,8 @@ export const StudentSidebarData: StudentSidebarProps = {
       href: "/pages/student/schedule",
       icon: (
         <CalendarDays
-          style={{ width: "2.5rem", height: "2.5rem" }}
-          className="text-[#0C2943]"
+          style={{ width: "2rem", height: "2rem" }}
+          className="text-white"
         />
       ),
     },
@@ -45,8 +45,8 @@ export const StudentSidebarData: StudentSidebarProps = {
       href: "/pages/student/grade",
       icon: (
         <GraduationCap
-          style={{ width: "2.5rem", height: "2.5rem" }}
-          className="text-[#0C2943]"
+          style={{ width: "2rem", height: "2rem" }}
+          className="text-white"
         />
       ),
     },
@@ -56,8 +56,8 @@ export const StudentSidebarData: StudentSidebarProps = {
       href: "/payment",
       icon: (
         <CreditCard
-          style={{ width: "2.5rem", height: "2.5rem" }}
-          className="text-[#0C2943]"
+          style={{ width: "2rem", height: "2rem" }}
+          className="text-white"
         />
       ),
     },
@@ -67,8 +67,8 @@ export const StudentSidebarData: StudentSidebarProps = {
       href: "/pages/student/profile",
       icon: (
         <BookText
-          style={{ width: "2.5rem", height: "2.5rem" }}
-          className="text-[#0C2943]"
+          style={{ width: "2rem", height: "2rem" }}
+          className="text-white"
         />
       ),
     },
